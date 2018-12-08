@@ -12,14 +12,17 @@ let package = Package(
     targets: [
         .target(name: "jsondump",
                 path: "example",
+                exclude: ["test"],
                 sources: ["jsondump.c"],
                 publicHeadersPath: "."),
         .target(name: "simple",
                 path: "example",
+                exclude: ["test"],
                 sources: ["simple.c"],
                 publicHeadersPath: "."),
         .target(name: "CJSMN",
                 path: ".",
+                exclude: ["test"],
                 sources: ["jsmn.h", "SPMSupport.c"],
                 publicHeadersPath: ".")
     ]
